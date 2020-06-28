@@ -1,28 +1,51 @@
-# 极客大学「算法训练营-第10期」作业提交仓库
+## 本周主题
+
+>### 一、递归
+
+>### 二、分冶
+
+>### 三、回溯
+
+### 一、递归
+
+第一层 terminator，第二层 current level，第三层 drill down，第四层 清理
+
+抛弃人肉递归以及递归树，找最近重复子问题，数学归纳法思维
 
 
-## 讲师课件下载地址
+```python
+def recursion(level,param1,param2,……):
+    # recursion terminator
+    if level > MAX_LEVEL:
+        process_result
+    return 
+    
+    #process logic in current level
+    process(level,data)
 
-请大家通过该链接查看讲师课件并进行下载，链接:https://pan.baidu.com/s/1GOuXJfnlERQs8bI8HNwPrQ  密码:zlua
-
-
-## 仓库目录结构说明
-
-1. `week01/` 代表第一周作业提交目录，以此类推。
-2. 请在对应周的目录下新建或修改自己的代码作业。
-2. 每周均有一个 `REDAME.md` 文档，你可以将自己当周的学习心得以及做题过程中的思考记录在该文档中。
-
-## 作业提交规则
- 
-1. 先将本仓库 Fork 到自己 GitHub 账号下。
-2. 将 Fork 后的仓库 Clone 到本地，然后在本地仓库中对应周的目录下新建或修改自己的代码作业，当周的学习总结写在对应周的README.md文件里。
-3. 在本地仓库完成作业后，push 到自己的 GitHub 远程仓库。
-4. 最后将远程仓库中当周的作业链接，按格式贴到班级仓库对应学习周的issue下面。
-5. 提交issue请务必按照规定格式进行提交，否则作业统计工具将抓取不到你的作业提交记录。 
-
-详细的作业提交流程可以查阅：https://shimo.im/docs/m5rtM8K8rNsjw5jk/ 
+    #drill down
+    self.recursion(level+1,p1,)
+    
+    #reverse the current level status if needed
+```
 
 
-## 注意事项
+```python
+def recursion(level,param1,param2……):
+    if level > MAX_LEVEL:
+        process_result
+    return
 
- 如果对 Git 和 GitHub 不太了解，请参考 [Git 官方文档](https://git-scm.com/book/zh/v2) 或者极客时间的[《玩转 Git 三剑客》](https://time.geekbang.org/course/intro/145)视频课程。
+    process(level,data)
+    
+    self.recursion(level+1，p1，)
+```
+
+### 二、回溯
+
+回溯法是一种探索所有潜在可能性找到解决方案的算法。如果当前方案不是正确的解决方案，或者不是最后一个正确的解决方案，则回溯法通过修改上一步的值继续寻找解决方案。
+
+
+```python
+
+```
